@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
 public class FileInOutApp {
+
     public static void main(String[] args) {
         File inFd = new File("c:/tmp/file7.txt"); //java turns it to c:\tmp\file7.txt
         File outFd = new File("c:/tmp/file7-out.txt");
