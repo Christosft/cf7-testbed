@@ -4,7 +4,7 @@ public class StrBuilderApp {
 
     public static void main(String[] args) {
 
-        String concatStr = "";
+        StringBuilder concatStr = new StringBuilder();
         long timeStart = 0L;
         long timeEnd = 0L;
         double elapsedTime = 0.0;
@@ -14,7 +14,7 @@ public class StrBuilderApp {
         timeStart = System.currentTimeMillis();
 
         for (int i = 1; i <= 500000; i++) {
-            concatStr = concatStr + i;
+            concatStr.append(i);
         }
         timeEnd = System.currentTimeMillis();
         elapsedTime = (timeEnd - timeStart) / 1000.0;
