@@ -16,7 +16,7 @@ public class CustomerServiceImpl {
             }
             iCustomerDAO.addCustomer(customer);
         } catch (Exception e) {
-            System.err.println("");
+            System.err.println(" ");
             throw e;
         }
     }
