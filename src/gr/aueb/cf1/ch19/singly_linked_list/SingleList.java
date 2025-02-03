@@ -17,8 +17,58 @@ public class SingleList <T>{
         head = tmp;
     }
 
-    public void insertLast(T t) {
+    /**
+     * time-complexity 0(n)
+     * @param t the value to be inserted
+     */
 
+    public void insertLast(T t) {
+        Node<T> tmp = new Node<>();
+        tmp.setItem(t);
+        tmp.setNext(null);
+
+        if (head == null) {
+           insertFirst(t);
+           return;
+        }
+
+        Node<T> n;
+        for (n = head; n.getNext() != null; n = n.getNext()) {
+
+        }
+        n.setNext(tmp);
+    }
+
+    /**
+     * time complexity 0(1)
+     * @return the remove node
+     */
+    public Node<T> removeFirst() {
+        if (head == null) return null;
+
+        Node<T> node = head;
+        head = head.getNext();
+        return node;
+    }
+
+    /**
+     * time complexity 0(n)
+     * @return the remove node
+     */
+
+    public Node<T> removeLast() {
+        if (head == null || head.getNext() == null) {
+            return removeFirst();
+        }
+
+        Node<T> n;
+        for (n = head; n.getNext().getNext() != null; n = n.getNext()) {
+
+        }
+
+        Node<T> nodeToReturn = n.getNext();
+        n.setNext(null);
+        return nodeToReturn;
     }
 
 }
