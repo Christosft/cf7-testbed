@@ -41,7 +41,7 @@ public class SingleList <T>{
 
     /**
      * time complexity 0(1)
-     * @return the remove node
+     * @return
      */
     public Node<T> removeFirst() {
         if (head == null) return null;
