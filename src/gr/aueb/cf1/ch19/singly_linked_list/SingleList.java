@@ -71,4 +71,40 @@ public class SingleList <T>{
         return nodeToReturn;
     }
 
+    /**
+     * time complexity 0(n)
+     * @param t the value to search for
+     * @return the node that contains the value,
+     * null otherwise
+     */
+
+    public Node<T> get(T t) {
+        Node<T> nodeToReturn = null;
+
+        for (Node<T> n = head; n != null; n = n.getNext()) {
+            if (n.getItem().equals(t)) {
+                nodeToReturn = n;
+            }
+        }
+        return nodeToReturn;
+    }
+
+    public void traverse() {
+        for (Node<T> n = head; n != null; n = n.getNext()) {
+            System.out.println(n.getItem());
+        }
+    }
+    public boolean isEmpty() {
+        return head == null;
+    }
+
+    public int size() {
+        int counter = 0;
+
+        for (Node<T> n = head; n !=null; n = n.getNext()) {
+            counter++;
+        }
+        return counter;
+    }
+
 }
