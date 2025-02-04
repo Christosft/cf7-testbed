@@ -22,16 +22,23 @@ public class DoublyLinkedList<T> {
         head = tmp;
     }
 
+
+    /**
+     * time complexity 0(1)
+     * @param t
+     */
     public void insertLast(T t) {
         if (head == null) {
             insertFirst(t);
             return;
         }
 
-
         Node<T> tmp = new Node<>();
         tmp.setItem(t);
-        tmp.setNext(head);
+        tmp.setNext(null);
         tmp.setPrev(tail);
+
+        tail.setNext(tmp);
+        tail = tmp;
     }
 }
