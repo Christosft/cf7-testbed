@@ -15,4 +15,5 @@ public class ReluctantPattern {
             System.out.println(matcher.group(0));
         }
     }
+}
 
