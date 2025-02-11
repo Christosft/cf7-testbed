@@ -84,14 +84,14 @@ public class RegExMain {
     }
 
     public static String[] doSplit(String h) {
-        return h.split("\\h+");
+        return h.split("\\s+");
     }
 
     public static String doReplace(String h) {
-        return h.replaceAll("\\h+", "&");
+        return h.replaceAll("\\s+", "&");
     }
 
     public static String doReplaceBachReference (String h) {
-        return h.replaceAll("(.+)\\h+(.+)", "$2 $1");
+        return h.replaceAll("(.+)\\s+(.+)", "$2 $1");
     }
 }
