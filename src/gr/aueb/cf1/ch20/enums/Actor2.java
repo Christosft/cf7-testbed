@@ -5,7 +5,7 @@ public enum Actor2 {
         @Override
         public String toRole() {
             return  "ROLE_CIVILIAN";
-        }
+            }
 
         },
     EMPLOYEE {
