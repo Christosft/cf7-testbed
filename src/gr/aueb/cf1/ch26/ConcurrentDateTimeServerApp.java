@@ -11,8 +11,8 @@ public class ConcurrentDateTimeServerApp {
 
     public static void main(String[] args) {
 
-        try (ServerSocket servFd = new ServerSocket()){
-            //servFd.bind(new InetSocketAddress("127.0.0.1", PORT));
+        try (ServerSocket servFd = new ServerSocket()) {
+            servFd.bind(new InetSocketAddress("127.0.0.1", PORT));
             System.out.println("Datetime server has started ...");
 
             for (;;) {

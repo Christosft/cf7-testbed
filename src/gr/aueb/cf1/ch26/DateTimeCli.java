@@ -6,16 +6,16 @@ import java.io.InputStreamReader;
 import java.net.InetAddress;
 import java.net.Socket;
 
+
 public class DateTimeCli {
 
     public static void main(String[] args) {
-
         Socket socket = null;
         StringBuilder sb = new StringBuilder();
         BufferedReader bf = null;
 
         try {
-            //InetAddress servAddress = InetAddress.getByName("time.nist.gov");
+//            InetAddress servAddress = InetAddress.getByName("time.nist.gov");
             InetAddress servAddress = InetAddress.getByName("127.0.0.1");
             int servPort = 13;
             socket = new Socket(servAddress, servPort);
@@ -26,17 +26,19 @@ public class DateTimeCli {
                 sb.append(line).append("\n");
             }
 
-            System.out.println("ServerDateTime: " + sb);
-
-        } catch (IOException e){
+            System.out.println("Server DateTime: " + sb);
+        } catch (IOException e) {
             e.printStackTrace();
         } finally {
             try {
-                if(socket != null) socket.close();
-                if (bf !=null) bf.close();
+                if (socket != null) socket.close();
+                if (bf != null) bf.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+
         }
+
+
     }
 }
