@@ -19,12 +19,22 @@ public class HelloFrame extends JFrame {
             JButton btn = new JButton("Click Me");
             contentPane.add(btn);
 
+            //JButton btn1 = new JButton("Push to see");
+            //contentPane.add(btn1);
+
             btn.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     JOptionPane.showMessageDialog(null, "Hello Coding Factory", "Hello", JOptionPane.INFORMATION_MESSAGE);
                 }
             });
+
+            //btn1.addActionListener(new ActionListener() {
+            //    @Override
+            // public void actionPerformed(ActionEvent e) {
+            //        JOptionPane.showMessageDialog(null, "click here to see ", "click", JOptionPane.INFORMATION_MESSAGE);
+            //    }
+            //});
         }
     }
 
